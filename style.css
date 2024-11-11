@@ -1,4 +1,4 @@
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -7,118 +7,122 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f8f9fa;
+    margin-top: 70px; /* Espaço para o header fixo */
+}
+
+/* Header */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-
-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 40px;
-    width: 100%;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: padding 0.3s ease;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    max-width: 600px;
-}
-
-
-.menu-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+/* Menu Container */
+.menu-container {
     margin-top: 20px;
-    max-width: 1200px;
-    width: 100%;
+}
+
+.menu-container h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .menu-item {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 280px;
+    cursor: pointer;
     padding: 20px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-.menu-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .menu-item h3 {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #333;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .menu-item p {
-    font-size: 1rem;
+    font-size: 14px;
     color: #666;
-    line-height: 1.5;
+    margin: 5px 0;
 }
 
 .menu-item .price {
+    font-size: 18px;
+    color: #ff4500;
+    margin-top: 10px;
     font-weight: bold;
-    font-size: 1.2rem;
-    color: #007bff;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 8px;
     margin-top: 10px;
 }
 
-
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .menu-item {
-        width: 90%;
-    }
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: #777;
+    font-size: 14px;
+    margin-top: 40px;
 }
 
+/* Button */
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff4500;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .menu-item {
-        width: 45%;
-    }
+button:hover {
+    background-color: #e03e00;
 }
